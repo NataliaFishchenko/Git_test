@@ -1,5 +1,4 @@
-/.vs
-/first_lesson/.vs
-/first_lesson/first_lesson/bin
-/first_lesson/first_lesson/obj
-**/.DS_Store
+**/.vs
+**/bin
+**/obj
+.DS_Store
