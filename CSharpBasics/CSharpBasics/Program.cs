@@ -5,7 +5,7 @@ using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text;
 
-new Homework().Task_8();
+new Homework().Task_3();
 
 class Homework
 {
@@ -54,9 +54,12 @@ class Homework
 
     public void Task_3()
     {
-        var firstName = "Tom";
-        var lastName = "Benenson";
-        var age = "23";
+        Console.WriteLine("Enter your first name:");
+        var firstName = Console.ReadLine();
+        Console.WriteLine("Enter your last name:");
+        var lastName = Console.ReadLine();
+        Console.WriteLine("Enter your age:");
+        var age = Console.ReadLine();
 
         Console.WriteLine($"\"How old are you\", - policemen asked.\n\"{age}\", - {firstName} {lastName} answered.");
         Console.ReadLine();
@@ -86,11 +89,11 @@ class Homework
     public void Task_5()
     {
         string text = "Natalia";
-        string a = text.Substring(2);
-        string b = a.Substring(3);
+        string a = text.Substring(0, text.Length - 5);
+        string b = text.Substring(2);
 
         string[] textParts = new string[] { a, b };
-        string c = string.Join(" ", textParts);
+        string c = string.Join(" ",textParts);
         Console.WriteLine(c);
         Console.ReadLine();
     }
