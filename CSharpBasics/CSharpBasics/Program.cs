@@ -5,7 +5,7 @@ using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text;
 
-new Homework().Task_3();
+new Homework_3().Task_3();
 
 class Homework
 {
@@ -130,3 +130,98 @@ class Homework
     }
 }
 
+class Homework_3
+    {
+    public void Task_1()
+    {
+        Console.WriteLine("Enter a number:");
+        var numberToString = Console.ReadLine();
+        var numberToInt = Convert.ToInt32(numberToString);
+        if (numberToInt % 2 == 0 && numberToInt % 5 == 0)
+        {
+            Console.WriteLine("tutti-frutti");
+        }
+        else if (numberToInt % 2 == 0)
+        {
+            Console.WriteLine("tutti");
+        }
+        else if (numberToInt % 5 == 0) 
+        {
+            Console.WriteLine("frutti");
+        }
+        Console.ReadLine();
+    }
+
+    public void Task_2()
+    {
+        Console.WriteLine("Enter a number:");
+        var numberToString1 = Console.ReadLine();
+        var numberToInt1 = Convert.ToInt32(numberToString1);
+        Console.WriteLine("Enter a number that is more than the first one:");
+        var numberToString2 = Console.ReadLine();
+        var numberToInt2 = Convert.ToInt32(numberToString2);
+        if (numberToInt1 > numberToInt2)
+        {
+            Console.WriteLine($"You didn't fullfit the condition: {numberToInt1} > {numberToInt2}");
+            Console.ReadLine();
+        }
+        for (int numberInInterval = numberToInt1; numberInInterval <= numberToInt2; numberInInterval++)
+        {
+            if (numberInInterval%2==0 && numberInInterval%5==0)
+            {
+                Console.WriteLine("tutti-frutti");
+            }
+            else if (numberInInterval % 2 == 0)
+            {
+                Console.WriteLine("tutti");
+            }
+            else if (numberInInterval % 5 == 0)
+            {
+                Console.WriteLine("frutti");
+            }
+            else
+            {
+                Console.WriteLine($"Number {numberInInterval} can't be divided on 2 or 5");
+            }
+        }
+        Console.ReadLine();
+    }
+
+    public void Task_3()
+    {
+        Console.WriteLine("Enter a number 1:");
+        var numberToString1 = Console.ReadLine();
+        var numberToInt1 = Convert.ToInt32(numberToString1);
+        Console.WriteLine("Enter a number 2:");
+        var numberToString2 = Console.ReadLine();
+        var numberToInt2 = Convert.ToInt32(numberToString2);
+        int maxNumber;
+        int minNumber;
+        if (numberToInt1 == numberToInt2)
+        {
+            Console.WriteLine($"{numberToInt1} = {numberToInt2}");
+            Console.ReadLine();
+        }
+        if (numberToInt1 > numberToInt2)
+        {
+            maxNumber = numberToInt1;
+            minNumber = numberToInt2;
+        }
+        else
+        {
+            maxNumber = numberToInt2;
+            minNumber = numberToInt1;
+        }
+
+        while (minNumber < maxNumber)
+        {
+            Console.WriteLine($"{minNumber} < {maxNumber}");
+            Console.ReadLine();
+            minNumber++;
+        }
+
+    }
+
+}
+
+    
