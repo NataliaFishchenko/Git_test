@@ -200,7 +200,6 @@ class Homework_3
         if (numberToInt1 == numberToInt2)
         {
             Console.WriteLine($"{numberToInt1} = {numberToInt2}");
-            Console.ReadLine();
         }
         if (numberToInt1 > numberToInt2)
         {
@@ -213,13 +212,28 @@ class Homework_3
             minNumber = numberToInt1;
         }
 
-        while (minNumber < maxNumber)
+        while (minNumber <= maxNumber)
         {
-            Console.WriteLine($"{minNumber} < {maxNumber}");
-            Console.ReadLine();
+            //Console.WriteLine($"{minNumber} < {maxNumber}");
+            if (minNumber % 2 == 0 && minNumber % 5 == 0)
+            {
+                Console.WriteLine("tutti-frutti");
+            }
+            else if (minNumber % 2 == 0)
+            {
+                Console.WriteLine("tutti");
+            }
+            else if (minNumber % 5 == 0)
+            {
+                Console.WriteLine("frutti");
+            }
+            else
+            {
+                Console.WriteLine($"Number {minNumber} can't be divided on 2 or 5");
+            }
             minNumber++;
         }
-
+        Console.ReadLine();
     }
 
 }
