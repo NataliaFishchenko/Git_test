@@ -10,7 +10,7 @@ namespace CSharpOOP2
         private int Length;
         internal int Width = 60;
         public string State = "new"; //default setting
-        public static string Type = "Furniture"; 
+        public static string Type = "Furniture"; //static field
 
         public Table(string color, int height, string material, bool isforkitchen ) //constructor with all parameters
         {
@@ -64,7 +64,9 @@ namespace CSharpOOP2
             }
             Console.ReadLine();
         }
-        public static void TaskForYou() => Console.WriteLine("What room is your table suitable for?");
+
+        public static void TaskForYou() => Console.WriteLine("What room is your table suitable for?"); //static method
+
     }
 }
 
