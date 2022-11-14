@@ -4,21 +4,21 @@ using System;
 using static System.Math;
 
 
-#region Task_1
+//#region Task_1
 
-Console.WriteLine("Enter the number of potatos:");
-var itemNumber = int.Parse(Console.ReadLine());
-Console.WriteLine("Enter the price for 1 potato:");
-var unitPrice = double.Parse(Console.ReadLine());
-Console.WriteLine("Enter your discount:");
-var discount = int.Parse(Console.ReadLine());
+//Console.WriteLine("Enter the number of potatos:");
+//var itemNumber = int.Parse(Console.ReadLine());
+//Console.WriteLine("Enter the price for 1 potato:");
+//var unitPrice = double.Parse(Console.ReadLine());
+//Console.WriteLine("Enter your discount:");
+//var discount = int.Parse(Console.ReadLine());
 
-double sumWithDiscount = new Homework().TotalSum(unitPrice, discount, itemNumber);
+//double sumWithDiscount = new Homework().TotalSum(unitPrice, discount, itemNumber);
 
-Console.WriteLine($"Total: {sumWithDiscount}");
-Console.ReadLine();
+//Console.WriteLine($"Total: {sumWithDiscount}");
+//Console.ReadLine();
 
-#endregion
+//#endregion
 
 //#region Task_2
 
@@ -49,9 +49,9 @@ Console.ReadLine();
 //var sumForItem3 = new Homework().TotalSum(unitPrice3, discount, itemNumber3);
 
 //Console.WriteLine("Items/Numbers/Price/Summ with discount:");
-//new Homework().PrintBill(itemName1, unitPrice1, discount, itemNumber1);
-//new Homework().PrintBill(itemName2, unitPrice2, discount, itemNumber2);
-//new Homework().PrintBill(itemName3, unitPrice3, discount, itemNumber3);
+//new Homework().PrintBillString(itemName1, unitPrice1, discount, itemNumber1);
+//new Homework().PrintBillString(itemName2, unitPrice2, discount, itemNumber2);
+//new Homework().PrintBillString(itemName3, unitPrice3, discount, itemNumber3);
 
 //var sumTotal = sumForItem1 + sumForItem2 + sumForItem3;
 //Console.WriteLine($"Total: {sumTotal}");
@@ -59,47 +59,47 @@ Console.ReadLine();
 
 //#endregion
 
-//#region Task_3
+#region Task_3
 
-//int itemNumber1 = 5;
-//Console.WriteLine("Enter the name of your item №1:");
-//var itemName1 = Console.ReadLine();
-////Console.WriteLine("Enter the number of items:");
-////var itemNumber1 = int.Parse(Console.ReadLine());
-//Console.WriteLine("Enter the price for 1 item:");
-//var unitPrice1 = double.Parse(Console.ReadLine());
-//Console.WriteLine("Enter the name of your item №2:");
-//var itemName2 = Console.ReadLine();
-////Console.WriteLine("Enter the number of item №2:");
-////var itemNumber2 = int.Parse(Console.ReadLine());
-//Console.WriteLine("Enter the price for one item №2:");
-//var unitPrice2 = double.Parse(Console.ReadLine());
-//Console.WriteLine("Enter the name of your item №3:");
-//var itemName3 = Console.ReadLine();
-////Console.WriteLine("Enter the number of item №3:");
-////var itemNumber3 = int.Parse(Console.ReadLine());
-//Console.WriteLine("Enter the price for one item №3:");
-//var unitPrice3 = double.Parse(Console.ReadLine());
+int itemNumber1 = 5;
+Console.WriteLine("Enter the name of your item №1:");
+var itemName1 = Console.ReadLine();
+//Console.WriteLine("Enter the number of items:");
+//var itemNumber1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the price for 1 item:");
+var unitPrice1 = double.Parse(Console.ReadLine());
+Console.WriteLine("Enter the name of your item №2:");
+var itemName2 = Console.ReadLine();
+//Console.WriteLine("Enter the number of item №2:");
+//var itemNumber2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the price for one item №2:");
+var unitPrice2 = double.Parse(Console.ReadLine());
+Console.WriteLine("Enter the name of your item №3:");
+var itemName3 = Console.ReadLine();
+//Console.WriteLine("Enter the number of item №3:");
+//var itemNumber3 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the price for one item №3:");
+var unitPrice3 = double.Parse(Console.ReadLine());
 
-//Console.WriteLine("Enter your discount:");
-//var discount = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your discount:");
+var discount = int.Parse(Console.ReadLine());
 
-//var sumForItem1 = new Homework().TotalSum(unitPrice1, discount, itemNumber1);
-//var sumForItem2 = new Homework().TotalSum(unitPrice2, discount);
-//var sumForItem3 = new Homework().TotalSum(unitPrice3, discount, 15);
-
-
-//Console.WriteLine("Items/Numbers/Price/Summ with discount:");
-//new Homework().PrintWithoutItemNumber(itemName1, unitPrice1, discount, itemNumber1);
-//new Homework().PrintWithoutItemNumber(itemName2, unitPrice2, discount);
-//new Homework().PrintWithoutItemNumber(itemName3, unitPrice3, discount, 15);
+var sumForItem1 = new Homework().TotalSum(unitPrice1, discount, itemNumber1);
+var sumForItem2 = new Homework().TotalSum(unitPrice2, discount);
+var sumForItem3 = new Homework().TotalSum(unitPrice3, discount, 15);
 
 
-//var sumTotal = sumForItem1 + sumForItem2 + sumForItem3;
-//Console.WriteLine($"Total: {sumTotal}");
-//Console.ReadLine();
+Console.WriteLine("Items/Numbers/Price/Summ with discount:");
+new Homework().PrintWithoutItemNumber(itemName1, unitPrice1, discount, itemNumber1);
+new Homework().PrintWithoutItemNumber(itemName2, unitPrice2, discount);
+new Homework().PrintWithoutItemNumber(itemName3, unitPrice3, discount, 15);
 
-//#endregion
+
+var sumTotal = sumForItem1 + sumForItem2 + sumForItem3;
+Console.WriteLine($"Total: {sumTotal}");
+Console.ReadLine();
+
+#endregion
 
 //#region Task_4
 
@@ -125,13 +125,15 @@ Console.ReadLine();
 
 //#region Task_5
 
-//Console.WriteLine("Enter a side legth of square:");
-//var sideSquare = int.Parse(Console.ReadLine());
-//Console.WriteLine("Enter a radius:");
+//Console.WriteLine("Enter a base of triangle:");
+//var baseTriangle= double.Parse(Console.ReadLine());
+//Console.WriteLine("Enter a height of triangle:");
+//var heightTriangle = double.Parse(Console.ReadLine());
+//Console.WriteLine("Enter a radius of circle:");
 //var radiusCircle = double.Parse(Console.ReadLine());
-//var areaOfSquare = new Homework().Area(sideSquare);
+//var areaOfTriangle = new Homework().Area(heightTriangle, baseTriangle);
 //double areaOfCircle = new Homework().Area(radiusCircle);
-//Console.WriteLine($"Area of square is {areaOfSquare}");
+//Console.WriteLine($"Area of square is {areaOfTriangle}");
 //Console.WriteLine($"Area of circle is {areaOfCircle}");
 //Console.ReadLine();
 
@@ -145,9 +147,9 @@ public class Homework
             var total = sum - sum * discount / 100;
             return total;
         }
-        public void PrintBill(string itemName, double unitPrice, int discount, int itemNumber)
+        public void PrintBillString(string itemName, double unitPrice, int discount, int itemNumber)
         {
-            var sum = new Homework().TotalSum(unitPrice, discount, itemNumber);
+            var sum = TotalSum(unitPrice, discount, itemNumber);
             Console.WriteLine($"{itemName} {itemNumber} {unitPrice} {sum}");
         }
         public void PrintWithoutItemNumber(string itemName, double unitPrice, int discount, int itemNumber = 10)
@@ -157,21 +159,21 @@ public class Homework
         }
         public int Perimeter(params int[] sides)
         {
-            int sum = 0;
-            foreach (int n in sides)
+            int perimeter = 0;
+            foreach (int side in sides)
             {
-                sum += n;
+                perimeter += side;
             }
-            return sum;
+            return perimeter;
         }
-        public double Area(int number)
+        public double Area(double heightTr, double baseTr)
         {
-            double area = number * number;
-            return area;
+            double areaOfTriangle = heightTr * baseTr * 0.5;
+            return areaOfTriangle;
         }
-        public double Area(double number)
+        public double Area(double radiusC)
         {
-            double area = number * number * Math.PI;
+            double area = radiusC * radiusC * Math.PI;
             return area;
         }
 
